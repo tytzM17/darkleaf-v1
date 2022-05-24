@@ -54,8 +54,12 @@ const styles = {
   },
 };
 const App = ({ isServerInfo }) => {
-  const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
-    useMoralis();
+  const {
+    isWeb3Enabled,
+    enableWeb3,
+    isAuthenticated,
+    isWeb3EnableLoading,
+  } = useMoralis();
 
   useEffect(() => {
     const connectorId = window.localStorage.getItem("connectorId");
@@ -107,7 +111,7 @@ const App = ({ isServerInfo }) => {
             fontFamily: "BIZ UDMincho, serif",
           }}
         >
-          darkleaf 2021
+          darkleaf 2022
         </Text>
       </Footer>
     </Layout>
