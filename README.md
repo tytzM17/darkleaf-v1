@@ -339,13 +339,8 @@ const ShowUniswapObserveValues = () => {
 ```jsx
 import { useERC20Balances } from "react-moralis";
 
-const {
-  fetchERC20Balances,
-  data,
-  isLoading,
-  isFetching,
-  error,
-} = useERC20Balances();
+const { fetchERC20Balances, data, isLoading, isFetching, error } =
+  useERC20Balances();
 
 const ERC20Balances = () => {
   return (
@@ -401,13 +396,8 @@ const ERC20Balances = () => {
 ```jsx
 import { useERC20Transfers } from "react-moralis";
 
-const {
-  fetchERC20Transfers,
-  data,
-  error,
-  isLoading,
-  isFetching,
-} = useERC20Transfers();
+const { fetchERC20Transfers, data, error, isLoading, isFetching } =
+  useERC20Transfers();
 
 const ERC20Transfers = () => {
   return (
@@ -511,14 +501,8 @@ function NativeBalance() {
 ```jsx
 import { useNativeTransactions } from "react-moralis";
 
-const {
-  getNativeTransations,
-  data,
-  chainId,
-  error,
-  isLoading,
-  isFetching,
-} = useNativeTransactions();
+const { getNativeTransations, data, chainId, error, isLoading, isFetching } =
+  useNativeTransactions();
 
 const NativeTransactions = () => {
   return (
@@ -827,13 +811,8 @@ function Swap() {
 import { useOneInchQuote } from "react-moralis";
 
 const SupportedTokens = () => {
-  const {
-    getSupportedTokens,
-    data,
-    isFetching,
-    isLoading,
-    error,
-  } = useOneInchTokens({ chain: "bsc" });
+  const { getSupportedTokens, data, isFetching, isLoading, error } =
+    useOneInchTokens({ chain: "bsc" });
 
   return (
     <div>
