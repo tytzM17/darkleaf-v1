@@ -54,8 +54,12 @@ const styles = {
   },
 };
 const App = ({ isServerInfo }) => {
-  const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
-    useMoralis();
+  const {
+    isWeb3Enabled,
+    enableWeb3,
+    isAuthenticated,
+    isWeb3EnableLoading,
+  } = useMoralis();
 
   useEffect(() => {
     const connectorId = window.localStorage.getItem("connectorId");
@@ -100,7 +104,15 @@ const App = ({ isServerInfo }) => {
         </div>
       </Router>
       <Footer style={{ textAlign: "center" }}>
-        <Text style={{ display: "block" }}>darkleaf 2021</Text>
+        <Text
+          style={{
+            display: "block",
+            fontFamily: "ABeeZee, sans-serif",
+            fontFamily: "BIZ UDMincho, serif",
+          }}
+        >
+          darkleaf 2021
+        </Text>
       </Footer>
     </Layout>
   );
