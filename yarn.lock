@@ -9,6 +9,11 @@
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.0"
 
+"@ant-design/aliyun-theme@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@ant-design/aliyun-theme/-/aliyun-theme-0.0.5.tgz#ba484d49b27e1aaec85da3ec1429cd331b1c3835"
+  integrity sha512-aANsi0q84jzV7Phom/ieyIe2XsWzfu6OpmJUAEE7lpNKy6AAo4HcSoU08VHmtno4B6W9Z3koIvNBMMlOuPh6Eg==
+
 "@ant-design/colors@^6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@ant-design/colors/-/colors-6.0.0.tgz#9b9366257cffcc47db42b9d0203bb592c13c0298"

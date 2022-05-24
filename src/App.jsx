@@ -56,8 +56,12 @@ const styles = {
   },
 };
 const App = ({ isServerInfo }) => {
-  const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
-    useMoralis();
+  const {
+    isWeb3Enabled,
+    enableWeb3,
+    isAuthenticated,
+    isWeb3EnableLoading,
+  } = useMoralis();
 
   useEffect(() => {
     const connectorId = window.localStorage.getItem("connectorId");
@@ -74,13 +78,6 @@ const App = ({ isServerInfo }) => {
           <MenuItems />
           <div style={styles.headerRight}>
             <Chains />
-            <TokenPrice
-              address="0x1f9840a85d5af5bf1d1762f925bdaddc4201f984"
-              chain="eth"
-              image="https://cloudflare-ipfs.com/ipfs/QmXttGpZrECX5qCyXbBQiqgQNytVGeZW5Anewvh2jc4psg/"
-              size="40px"
-            />
-            <NativeBalance />
             <Account />
           </div>
         </Header>
@@ -93,33 +90,8 @@ const App = ({ isServerInfo }) => {
             <Route path="/wallet">
               <Wallet />
             </Route>
-            <Route path="/1inch">
-              <Tabs defaultActiveKey="1" style={{ alignItems: "center" }}>
-                <Tabs.TabPane tab={<span>Ethereum</span>} key="1">
-                  <DEX chain="eth" />
-                </Tabs.TabPane>
-                <Tabs.TabPane tab={<span>Binance Smart Chain</span>} key="2">
-                  <DEX chain="bsc" />
-                </Tabs.TabPane>
-                <Tabs.TabPane tab={<span>Polygon</span>} key="3">
-                  <DEX chain="polygon" />
-                </Tabs.TabPane>
-              </Tabs>
-            </Route>
             <Route path="/erc20balance">
               <ERC20Balance />
-            </Route>
-            <Route path="/onramp">
-              <Ramper />
-            </Route>
-            <Route path="/erc20transfers">
-              <ERC20Transfers />
-            </Route>
-            <Route path="/nftBalance">
-              <NFTBalance />
-            </Route>
-            <Route path="/contract">
-              <Contract />
             </Route>
             <Route path="/">
               <Redirect to="/quickstart" />
@@ -134,39 +106,7 @@ const App = ({ isServerInfo }) => {
         </div>
       </Router>
       <Footer style={{ textAlign: "center" }}>
-        <Text style={{ display: "block" }}>
-          ⭐️ Please star this{" "}
-          <a
-            href="https://github.com/ethereum-boilerplate/ethereum-boilerplate/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            boilerplate
-          </a>
-          , every star makes us very happy!
-        </Text>
-
-        <Text style={{ display: "block" }}>
-          🙋 You have questions? Ask them on the {""}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://forum.moralis.io/t/ethereum-boilerplate-questions/3951/29"
-          >
-            Moralis forum
-          </a>
-        </Text>
-
-        <Text style={{ display: "block" }}>
-          📖 Read more about{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://moralis.io?utm_source=boilerplatehosted&utm_medium=todo&utm_campaign=ethereum-boilerplat"
-          >
-            Moralis
-          </a>
-        </Text>
+        <Text style={{ display: "block" }}>darkleaf 2021</Text>
       </Footer>
     </Layout>
   );
@@ -174,7 +114,7 @@ const App = ({ isServerInfo }) => {
 
 export const Logo = () => (
   <div style={{ display: "flex" }}>
-    <svg
+    {/* <svg
       width="60"
       height="38"
       viewBox="0 0 50 38"
@@ -192,6 +132,34 @@ export const Logo = () => (
       <path
         d="M39.7135 25.1249C37.1094 25.1025 34.9991 27.2127 34.9766 29.8169C34.9542 32.4211 37.0645 34.5313 39.6686 34.5538C41.1503 34.5538 42.5647 33.8578 43.4626 32.6905C43.53 32.6007 43.5973 32.4884 43.6871 32.3986C45.1015 30.221 44.4729 27.3025 42.2953 25.9107C41.532 25.3943 40.634 25.1249 39.7135 25.1249Z"
         fill="#B7E803"
+      />
+    </svg> */}
+    <svg
+      version="1.1"
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="32px"
+      height="32px"
+      viewBox="0 0 32 32"
+      enableBackground="new 0 0 32 32"
+    >
+      {" "}
+      <image
+        id="image0"
+        width="32"
+        height="32"
+        x="0"
+        y="0"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
+RQfmBRcSLC+EpZOAAAAAw0lEQVRIx8VVQRKEMAiDjv//MnvSwhIC6uwshx4KCRCwivzWzMx4xHqb
+Qll2F1bGLQbXK0fdyOrgHcXq4ZxiTeCMAlaAFcO3icBnMXdmb1mBXvBzCvblaVvw8Ehxg2BqB86e
+x5jvSgKDgSoCGyEi5incEnFqhCCPcUhgAe4pRhooeSGQt/qc4RghJYTbXuew2iC6rACfQ4KdSb2U
+sFq4yrF4PsZS861D3T/RIHb9qIL9Npqw7aBrcz5gfLmEU3T/xv/bB886RikYAGfIAAAAJXRFWHRk
+YXRlOmNyZWF0ZQAyMDIyLTA1LTIzVDE4OjQ0OjQ3KzAwOjAw3mHXagAAACV0RVh0ZGF0ZTptb2Rp
+ZnkAMjAyMi0wNS0yM1QxODo0NDo0NyswMDowMK88b9YAAAAASUVORK5CYII="
       />
     </svg>
   </div>
