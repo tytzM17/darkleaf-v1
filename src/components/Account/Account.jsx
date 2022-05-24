@@ -45,8 +45,13 @@ const styles = {
 };
 
 function Account() {
-  const { authenticate, isAuthenticated, account, chainId, logout } =
-    useMoralis();
+  const {
+    authenticate,
+    isAuthenticated,
+    account,
+    chainId,
+    logout,
+  } = useMoralis();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isAuthModalVisible, setIsAuthModalVisible] = useState(false);
 
@@ -65,7 +70,10 @@ function Account() {
             fontSize: "17px",
             fontWeight: "500",
           }}
-          style={{ fontSize: "16px", fontWeight: "500" }}
+          style={{
+            fontSize: "16px",
+            fontWeight: "500",
+          }}
           width="340px"
         >
           <div
@@ -95,7 +103,13 @@ function Account() {
                 }}
               >
                 <img src={icon} alt={title} style={styles.icon} />
-                <Text style={{ fontSize: "14px" }}>{title}</Text>
+                <Text
+                  style={{
+                    fontSize: "14px",
+                  }}
+                >
+                  {title}
+                </Text>
               </div>
             ))}
           </div>
@@ -137,7 +151,12 @@ function Account() {
           fontSize: "17px",
           fontWeight: "500",
         }}
-        style={{ fontSize: "16px", fontWeight: "500" }}
+        style={{
+          fontSize: "16px",
+          fontWeight: "500",
+          fontFamily: "ABeeZee, sans-serif",
+          fontFamily: "BIZ UDMincho, serif",
+        }}
         width="400px"
       >
         Account
@@ -145,6 +164,8 @@ function Account() {
           style={{
             marginTop: "10px",
             borderRadius: "1rem",
+            fontFamily: "ABeeZee, sans-serif",
+            fontFamily: "BIZ UDMincho, serif",
           }}
           bodyStyle={{ padding: "15px" }}
         >

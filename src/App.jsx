@@ -25,7 +25,8 @@ const styles = {
   content: {
     display: "flex",
     justifyContent: "center",
-    fontFamily: "Roboto, sans-serif",
+    fontFamily: "ABeeZee, sans-serif",
+    fontFamily: "BIZ UDMincho, serif",
     color: "#041836",
     marginTop: "130px",
     padding: "10px",
@@ -38,7 +39,8 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    fontFamily: "Roboto, sans-serif",
+    fontFamily: "ABeeZee, sans-serif",
+    fontFamily: "BIZ UDMincho, serif",
     borderBottom: "2px solid rgba(0, 0, 0, 0.06)",
     padding: "0 10px",
     boxShadow: "0 1px 10px rgb(151 164 175 / 10%)",
@@ -52,8 +54,12 @@ const styles = {
   },
 };
 const App = ({ isServerInfo }) => {
-  const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
-    useMoralis();
+  const {
+    isWeb3Enabled,
+    enableWeb3,
+    isAuthenticated,
+    isWeb3EnableLoading,
+  } = useMoralis();
 
   useEffect(() => {
     const connectorId = window.localStorage.getItem("connectorId");
