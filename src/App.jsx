@@ -8,15 +8,11 @@ import {
 } from "react-router-dom";
 import Account from "components/Account/Account";
 import Chains from "components/Chains";
-import TokenPrice from "components/TokenPrice";
 import ERC20Balance from "components/ERC20Balance";
-import ERC20Transfers from "components/ERC20Transfers";
-import DEX from "components/DEX";
-import NFTBalance from "components/NFTBalance";
 import Wallet from "components/Wallet";
 import { Layout, Tabs } from "antd";
-import "antd/dist/antd.css";
-import NativeBalance from "components/NativeBalance";
+import "antd/dist/antd.variable.min.css";
+import "antd/dist/antd.dark.css";
 import "./style.css";
 import QuickStart from "components/QuickStart";
 import Contract from "components/Contract/Contract";
@@ -38,7 +34,7 @@ const styles = {
     position: "fixed",
     zIndex: 1,
     width: "100%",
-    background: "#fff",
+    // background: "#fff",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -56,8 +52,12 @@ const styles = {
   },
 };
 const App = ({ isServerInfo }) => {
-  const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
-    useMoralis();
+  const {
+    isWeb3Enabled,
+    enableWeb3,
+    isAuthenticated,
+    isWeb3EnableLoading,
+  } = useMoralis();
 
   useEffect(() => {
     const connectorId = window.localStorage.getItem("connectorId");

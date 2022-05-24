@@ -7,7 +7,7 @@ function MenuItems() {
 
   return (
     <Menu
-      theme="light"
+      theme="dark"
       mode="horizontal"
       style={{
         display: "flex",

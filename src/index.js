@@ -5,6 +5,7 @@ import { MoralisProvider } from "react-moralis";
 import "./index.css";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import QuickStart from "components/QuickStart";
+import { ConfigProvider } from "antd";
 
 /** Get your free Moralis Account https://moralis.io/ */
 
@@ -32,6 +33,12 @@ const Application = () => {
     );
   }
 };
+
+ConfigProvider.config({
+  theme: {
+    primaryColor: "#1a1325",
+  },
+});
 
 ReactDOM.render(
   <StrictMode>
